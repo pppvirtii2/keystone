@@ -9,23 +9,28 @@ html
 		link(rel="stylesheet", href="/keystone/styles/auth.min.css")
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 		block css
-			
+
 	body: .auth-wrapper
-		
+
 		+flash-messages(messages)
 		if !messages
 			.alert.alert-placeholder &nbsp;
 		.auth-body(class=messages && messages.error.length ? 'has-errors' : null)
 			block content
-		
+
 		block footer
 			.auth-footer
-				| Powered by 
-				a(href='http://keystonejs.com', target='_blank', title='The Node.js CMS and web application platform (new window)') KeystoneJS
-		
+				| &copy;&nbsp;
+				a(href='http://profipodnikatelskyplan.cz', target='_blank') ProfiPodnikatelskyPlan
+				| . Created by&nbsp;
+				a(href='http://virtii.com', target='_blank', title='Great Mobile and Web Apps!') VIRTII
+				| .
+				//- | . Powered by&nbsp;
+				//- a(href='http://keystonejs.com', target='_blank', title='The Node.js CMS and web application platform (new window)') KeystoneJS
+
 		//- Page Scripts
 		block js
-		
+
 		//- Google Analytics
 		if env == 'production' && ga.property && ga.domain
 			script.
