@@ -61,7 +61,7 @@ mixin column_html(value)
 	div.col-value!= value
 
 mixin column_basic(value)
-	div.col-value= value
+	div.col-value(style='text-overflow:initial')= value
 
 mixin column_color(value)
 	div.col-value
