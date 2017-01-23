@@ -215,15 +215,20 @@ module.exports = Field.create({
 	
 				<div className={fieldClassName}>
 					<div className='file-container'>{container}
-			
-					<a href={
-							this.props.values && this.props.values.absoluteUrl &&  this.props.values.absoluteUrl
-							|| this.props.value && this.props.value.path && this.props.value.path.substr(1)
+			{
+		this.props.values && this.props.values.absoluteUrl
+		|| this.props.value && this.props.value.path &&
+						<a href={
+								this.props.values && this.props.values.absoluteUrl &&  this.props.values.absoluteUrl
+								|| this.props.value && this.props.value.path && this.props.value.path.substr(1)
+							}
+							>Download</a>
 						}
-						>Download</a><br />
-						{this.props.values && this.props.values.isImage &&
-							<img style={{maxWidth: '20rem',maxHeight: '20rem'}} src={this.props.values.absoluteUrl} />
-						}
+
+							<br />
+							{this.props.values && this.props.values.isImage &&
+								<img style={{maxWidth: '20rem',maxHeight: '20rem'}} src={this.props.values.absoluteUrl} />
+							}
 			</div>
 					{body}
 					<Note note={this.props.note} />
