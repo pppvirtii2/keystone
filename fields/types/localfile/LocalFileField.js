@@ -218,7 +218,7 @@ module.exports = Field.create({
 			
 					<a href={
 							this.props.values && this.props.values.absoluteUrl &&  this.props.values.absoluteUrl
-							|| this.props.value && this.props.value.path.substr(1)
+							|| this.props.value && this.props.value.path && this.props.value.path.substr(1)
 						}
 						>Download</a><br />
 						{this.props.values && this.props.values.isImage &&
