@@ -13,8 +13,10 @@ block content
 				.toolbar
 					if user.isAdmin
 						a(href='/keystone').btn.btn-primary Open Keystone
+					else
+						script window.location.href = "/";
 					a(href='/keystone/signout').btn.btn-cancel Sign out
-			
+				
 			else
 				form(method="post", novalidate).auth-form
 					input(type='hidden', name=csrf_token_key, value=csrf_token_value)
