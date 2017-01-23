@@ -217,7 +217,7 @@ module.exports = Field.create({
 					<div className='file-container'>{container}
 			
 					<a href={
-							this.props.values && this.props.values.isImage &&  this.props.values.absoluteUrl
+							this.props.values && this.props.values.absoluteUrl &&  this.props.values.absoluteUrl
 							|| this.props.value && this.props.value.path.substr(1)
 						}
 						>Download</a><br />
