@@ -214,7 +214,18 @@ module.exports = Field.create({
 				{this.renderFileAction()}
 	
 				<div className={fieldClassName}>
-					<div className='file-container'>{container}</div>
+					<div className='file-container'>{container}
+			
+					<a href={
+							this.props.values && this.props.values.isImage &&  this.props.values.absoluteUrl
+							|| this.props.value && this.props.value.path.substr(1)
+						}
+						>Download</a><br />
+						{this.props.values && this.props.values.isImage &&
+							<img style={{maxWidth: '20rem',maxHeight: '20rem'}} src={this.props.values.absoluteUrl} />
+						}
+			
+			</div>
 					{body}
 					<Note note={this.props.note} />
 				</div>
